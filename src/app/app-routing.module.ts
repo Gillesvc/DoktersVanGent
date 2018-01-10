@@ -8,7 +8,7 @@ import { ArtsDetailComponent } from './arts-detail/arts-detail.component';
 const routes: Routes = [
   { path: '', component: ArtsenComponent },
   { path: '', redirectTo: '', pathMatch: 'full' },
-  { path: 'detail/:id', component: ArtsDetailComponent },
+  { path: 'detail/:fid', component: ArtsDetailComponent },
 ];
 
 @NgModule({

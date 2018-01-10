@@ -6,8 +6,8 @@
 </nav>
 <input type="text" [(ngModel)]="listFilter" placeholder="zoek een huisarts">
 <div class="artsen">
-  <div *ngFor="let arts of filterArtsen" (click)="onSelect(arts)" id="arts" routerLink="/detail/{{arts.id}}">
+  <div *ngFor="let arts of filterArtsen" (click)="onSelect(arts)" id="arts" routerLink="/detail/{{arts.fid}}">
     <i class="glyphicon glyphicon-plus"></i>
-    <p class="artsName">{{arts.name}}</p>
+    <p class="artsName">{{arts.naam}}</p>
   </div>
 </div>

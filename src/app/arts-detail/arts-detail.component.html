@@ -1,20 +1,16 @@
 <div *ngIf="arts">
-  <h1>{{arts.name}}</h1>
+  <h1>{{arts.naam}}</h1>
   <nav>
     <a routerLink="">De Dokters van Gent</a>
     <a>/</a>
-    <a>Dokters</a>
+    <a routerLink="">Dokters</a>
     <a>/</a>
-    <a>{{arts.name}}</a>
+    <a>{{arts.naam}}</a>
   </nav>
   <h2>Algemene info</h2>
   <h3>Naam</h3>
-   <p>{{arts.name}}</p>
+   <p>{{arts.naam}}</p>
   <h2>Adres</h2>
-  <h3>Straat</h3>
-  <p>{{arts.street}}</p>
-  <h3>Gemeente</h3>
-  <p>{{arts.city}}</p>
-  
-
+  <p>{{arts.straat}} {{arts.huisnr}}</p>
+  <p>{{arts.postcode}} {{arts.gemeente}}</p>
 </div>

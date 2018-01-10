@@ -20,8 +20,14 @@ export class ArtsDetailComponent implements OnInit {
   }
   getArts(): void{
     const id = +this.route.snapshot.paramMap.get('fid');
-    // this.artsenService.getArts(id)
-    // .subscribe(arts => this.arts = arts);
+    console.log(id);
+    this.artsenService.getArts(id.toString())
+       .subscribe(arts => this.arts = arts);
+  }
+
+  getMapsUrl(arts): string{
+    let url = "https://maps.google.com/maps?q="+arts.lat+","+arts.long+"&hl=es;z=14&amp;output=embed";
+    return url;
   }
 
 }

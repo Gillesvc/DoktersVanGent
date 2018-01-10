@@ -16,8 +16,8 @@ export class ArtsService {
   getArtsen(): Observable<Arts[]> {
     return of(ARTSEN);
   }
-  getArts(id: string): Observable<Arts> {
-    return of(ARTSEN.find(arts => arts.id === id));
+  getArts(fid: string): Observable<Arts> {
+    return of(ARTSEN.find(arts => arts.fid === fid));
   }
   docs: Object[];
 

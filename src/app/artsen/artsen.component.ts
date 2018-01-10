@@ -14,24 +14,24 @@ export class ArtsenComponent implements OnInit {
   }
   set listFilter(value: string) {
     this._listFilter = value;
-    this.filterArtsen = this.listFilter ? this.performFilter(this.listFilter) : this.artsen;
+    this.filterArtsen = this.listFilter ? this.performFilter(this.listFilter) : this.getArtsen();
+    console.log(this.filterArtsen);
   }
   filterArtsen: Arts[];
   artsen: Arts[];
   /*selectedArts: Arts;*/
 
-  getArtsen(): void {
-    let result;
-    var dokters = this.artsService.getDokters().subscribe(data => {
-      result = data;
-      console.log(result[5]);
+  getArtsen(): Arts[] {
+    let doks = [];
+    var dokters = this.artsService.getDokters().subscribe(artsen => {
+      artsen.forEach(function(doc){
+        doks.push(doc);
+      })
+      this.filterArtsen = doks;
+      this.artsen = doks;
+      console.log(doks);
     });
-    // console.log("test " + dokters.forEach);
-    // .subscribe(artsen => {
-    //   this.artsen = artsen;
-    //     this.filterArtsen = this.artsen;
-    // }); 
-    console.log(result);
+    return doks;
   }
   constructor(private artsService: ArtsService) { }
   performFilter(filterBy: string): Arts[] {
@@ -42,7 +42,9 @@ export class ArtsenComponent implements OnInit {
   ngOnInit() {
     this.getArtsen();
   }
-  /* onSelect(arts: Arts): void {
+  selectedArts;
+  onSelect(arts: Arts): void {
+    console.log(arts);
     this.selectedArts = arts;
-  } */
+  } 
 }
