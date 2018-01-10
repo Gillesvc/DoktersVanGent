@@ -1,0 +1,28 @@
+h1{
+    width: 100%;
+    border-bottom: 1px solid;
+}
+h2{
+    width: 100%;
+    border-bottom: 1px solid;
+    font-size: 1.6em;
+    
+}
+h3{
+    font-size: 1.0em;
+    margin-bottom: 0px;
+}
+p{
+    margin: 0 0 0 10px;
+}
+nav{
+    width: 100%;
+    background-color: lightgrey;
+    border-radius: 3px;
+    height: 20px;
+}
+nav > a{
+    margin: 0 5px 0 5px;
+    font-size: 12px;
+ 
+}

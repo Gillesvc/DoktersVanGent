@@ -1,0 +1,13 @@
+<h1>Huisartsen</h1>
+<nav>
+  <a routerLink="">De Dokters van Gent</a>
+  <a>/</a>
+  <a>Dokters</a>
+</nav>
+<input type="text" [(ngModel)]="listFilter" placeholder="zoek een huisarts">
+<div class="artsen">
+  <div *ngFor="let arts of filterArtsen" (click)="onSelect(arts)" id="arts" routerLink="/detail/{{arts.id}}">
+    <i class="glyphicon glyphicon-plus"></i>
+    <p class="artsName">{{arts.name}}</p>
+  </div>
+</div>

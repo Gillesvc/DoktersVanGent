@@ -1,0 +1,31 @@
+.artsen{
+    left: 0;
+    right: 0;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+#arts{
+    width: 20%;
+    height: 200px;
+    background-color: rgb(196, 4, 4);  
+    margin: 0 10px 0 10px;
+    color: white;
+    text-align: center;
+}
+#arts:hover{
+    cursor: pointer;
+    background-color:rgba(196, 4, 4, 0.712);   
+    box-shadow: 2px 4px 10px #adadadaf;
+}
+.glyphicon{
+    top: 20px;
+    font-size: 5em;
+}
+.artsName{
+    margin-top: 50px;
+}
